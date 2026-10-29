@@ -22,7 +22,7 @@ class TestBooksCollector:
 
     def test_set_book_genre_add_genre_is_not_list(self, collect):
         collect.add_new_book('Убийство в Восточном экспрессе')
-        collect.set_book_genre('Убийство в Восточном экспрессе', 'Фэнтези')
+        collect.set_book_genre('Убийство в Восточном экспрессе', 'Фантастика')
         assert collect.books_genre.get('Убийство в Восточном экспрессе') == '', 'Книге добавился жанр которого нет в допустимых жанрах'
 
     def test_get_book_genre_for_name_positive_result(self, collect):
